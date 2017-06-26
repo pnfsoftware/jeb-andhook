@@ -14,7 +14,7 @@ import com.pnfsoftware.jeb.core.Version;
 import com.pnfsoftware.jeb.core.units.code.android.IDexUnit;
 import com.pnfsoftware.jeb.core.units.code.debug.IDebuggerUnit;
 import com.pnfsoftware.jeb.core.util.DebuggerHelper;
-import com.pnfsoftware.jeb.util.CollectionUtil;
+import com.pnfsoftware.jeb.util.collect.Lists;
 import com.pnfsoftware.jeb.util.logging.GlobalLog;
 import com.pnfsoftware.jeb.util.logging.ILogger;
 
@@ -57,7 +57,7 @@ public class AndroidCryptoHookPlugin extends AbstractEnginesPlugin {
     public IPluginInformation getPluginInformation() {
         return new PluginInformation("Android Crypto-Hook Plugin",
                 "Hook cryptographic primitives during an Android app debugging sesssion", "PNF Software",
-                Version.create(1, 0));
+                Version.create(1, 0), Version.create(2, 3), null);
     }
 
     private AndroidCryptoHook manager;
@@ -70,7 +70,7 @@ public class AndroidCryptoHookPlugin extends AbstractEnginesPlugin {
             return;
         }
 
-        IDexUnit dex = CollectionUtil.getFirst(RuntimeProjectUtil.findUnitsByType(prj, IDexUnit.class, false));
+        IDexUnit dex = Lists.getFirst(RuntimeProjectUtil.findUnitsByType(prj, IDexUnit.class, false));
         if(dex == null) {
             logger.warn("No DEX unit found");
             return;

@@ -9,7 +9,7 @@ import com.pnfsoftware.jeb.core.units.code.debug.ITypedValue;
 import com.pnfsoftware.jeb.core.units.code.debug.impl.ValueArray;
 import com.pnfsoftware.jeb.core.units.code.debug.impl.ValueByte;
 import com.pnfsoftware.jeb.core.units.code.debug.impl.ValueInteger;
-import com.pnfsoftware.jeb.util.Formatter;
+import com.pnfsoftware.jeb.util.format.Formatter;
 import com.pnfsoftware.jeb.util.logging.GlobalLog;
 import com.pnfsoftware.jeb.util.logging.ILogger;
 
