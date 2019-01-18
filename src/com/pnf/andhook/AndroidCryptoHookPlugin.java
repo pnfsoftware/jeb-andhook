@@ -57,7 +57,7 @@ public class AndroidCryptoHookPlugin extends AbstractEnginesPlugin {
     public IPluginInformation getPluginInformation() {
         return new PluginInformation("Android Crypto-Hook Plugin",
                 "Hook cryptographic primitives during an Android app debugging sesssion", "PNF Software",
-                Version.create(1, 0, 1), Version.create(2, 3), null);
+                Version.create(1, 0, 2), Version.create(3, 0, 9), null);
     }
 
     private AndroidCryptoHook manager;
